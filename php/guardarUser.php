@@ -19,7 +19,7 @@ if(isset($_POST)){
     }
   
     if(empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email) > 100){
-       $errores['emailR'] = 'El email no es válido';
+        $errores['emailR'] = 'El email no es válido';
     }
 
     if(empty($passwd) || !preg_match("/[A-Za-z0-9ÑñÁÉÍÓÚáéíóúÇç_.]+/",$passwd) || strlen($passwd) > 50){
