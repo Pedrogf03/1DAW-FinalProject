@@ -75,13 +75,17 @@ $passwdU = $usuario['contraseña'];
                   <td colspan="3">
                     <?php echo isset($_SESSION['errores_entrada']) ? mostrarError($_SESSION['errores_entrada'], 'passwdR') : ''; ?>
                     <?php echo isset($_SESSION['errores_entrada']) ? mostrarError($_SESSION['errores_entrada'], 'incorrectoL') : ''; ?>
+                    <?php echo isset($_SESSION['correcto']) ? $_SESSION['correcto'] : ''; ?>
                   </td>
                 </tr>
                 <tr>
                   <td colspan="3" id="guardar"><input type="submit" value="Aplicar cambios"></td>
                 </tr>
               </form>
-              <?php borrarErrores(); ?>
+              <?php
+              borrarErrores();
+              $_SESSION['correcto']= "";
+              ?>
             </table>
         </div> <!--contenido-->
     </div> <!--pagina-->
