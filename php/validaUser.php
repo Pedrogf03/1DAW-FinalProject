@@ -29,7 +29,7 @@ if(isset($_POST)){
 
     $select = mysqli_num_rows(mysqli_query($db, "SELECT email FROM usuario WHERE email = '$email';"));
     if($select == 0) {
-      $errores['emailL'] = 'El email no existe';
+      $errores['emailL'] = 'Email o contraseña incorrectos';
     }
 
     if(count($errores) == 0){
